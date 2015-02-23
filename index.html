@@ -1,11 +1,39 @@
-<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title>Rangel Acácio de Souza</title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.739fa268.css"> <link rel="stylesheet" href="styles/main.e24af667.css">  <body ng-app="portifolioApp"> <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> <!-- Add your site or application content here --> <div ng-include="'views/header-page.html'"></div> <div ng-include="'views/about.html'"></div> <div ng-include="'views/resume.html'"></div> <!-- <div ng-include="'views/portifolio.html'"></div> --> <div ng-include="'views/contato.html'"></div> <div ng-include="'views/footer-page.html'"></div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rangel Acácio de Souza</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+   	<link rel="stylesheet" href="css/media-queries.css">
+   	<link rel="stylesheet" href="css/magnific-popup.css">
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');</script> <!--[if lt IE 9]>
-    <script src="scripts/oldieshim.a466b7b1.js"></script>
-    <![endif]--> <script src="scripts/vendor.5f6b753d.js"></script> <script src="scripts/scripts.df9ffc31.js"></script>  
+   	<script src="js/modernizr.js"></script>
+   	<link rel="shortcut icon" href="favicon.png" >
+</head>
+<body>
+	<div id="header"></div>
+	<div id="about"></div>
+	<div id="resume"></div>
+	<div id="contato"></div>
+	<div id="footer"></div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   	<script>window.jQuery || document.write('<script src="scripts/jquery-1.10.2.min.js"><\/script>')</script>
+   	<script type="text/javascript" src="scripts/jquery-migrate-1.2.1.min.js"></script>
+   	<script src="scripts/jquery.flexslider.js"></script>
+   	<script src="scripts/waypoints.js"></script>
+   	<script src="scripts/jquery.fittext.js"></script>
+   	<script src="scripts/magnific-popup.js"></script>
+   	<script src="scripts/init.js"></script>
+
+   	 <script type="text/javascript">  
+        $( document ).ready( function(){                
+            $("#header").load("header-page.html");
+            $("#about").load("about.html");
+            $("#resume").load("resume.html");
+            $("#contato").load("contato.html");
+            $("#footer").load("footer-page.html");
+        });                
+    </script> 
+</body>
+</html>
