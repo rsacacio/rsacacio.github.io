@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
 
     <script src="scripts/modernizr.js"></script>
+    <script src="scripts/angular.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico" >
 </head>
-<body>
+<body ng-app="portifolioApp">
   <header id="home">
     <nav id="nav-wrap">
       <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
@@ -31,7 +32,7 @@
        </div>
        <div class="nine columns main-col">
           <h2>Sobre</h2>
-          <p>Reponsável, alegre e dedicado. Com 24 anos de idade, atualmente desenvolvedor sênior e líder de equipe de desenvolvimento. Iniciei profissionalmente na área de desenvolvimento em 2010, porém desde os 13 anos, já era fascinado por esse "mundo". Seja criando meus próprios IRCs (meados de 2003) ou criando páginas estáticas em trabalhos escolares e para amigos. Iniciei minha carreira profissional ao 16 anos, trabalhando como auxiliar de almoxarifado enquanto iniciava a faculdade. 2010 foi o ano em que entrei para a área de TI, como estagiário em desenvolvimento no Instituto Stela. Em 2012 fui convidado a trabalhar como programador junior na Paradigma Business Solution, e em pouco tempo de casa, fui promovido a pleno. Em 2013 fui convidado a retornar ao Instituto Stela, para assumir um cargo de maior responsábilidade, e aceitei ser Líder técnico de equipe de desenvolvimento, e onde hoje me encontro.
+          <p>Reponsável, alegre e dedicado. Com 24 anos de idade, atualmente desenvolvedor sênior e líder de equipe de desenvolvimento. Iniciei profissionalmente na área de desenvolvimento em 2010, porém desde os 13 anos, já era fascinado por esse "mundo". Seja criando meus próprios IRCs (meados de 2003) ou criando páginas estáticas em trabalhos escolares e para amigos. Iniciei minha carreira profissional aos 16 anos, trabalhando como auxiliar de almoxarifado enquanto iniciava a faculdade. 2010 foi o ano em que entrei para a área de TI, como estagiário em desenvolvimento no Instituto Stela. Em 2012 fui convidado a trabalhar como programador junior na Paradigma Business Solution, e em pouco tempo de casa, fui promovido a pleno. Em 2013 fui convidado a retornar ao Instituto Stela, para assumir um cargo de maior responsábilidade, e aceitei ser Líder técnico de equipe de desenvolvimento, e onde hoje me encontro.
           </p>
           <div class="row">
              <div class="columns contact-details">
@@ -54,16 +55,16 @@
        </div>
     </div>
   </section>
-  <section id="resume">
+  <section id="resume" ng-controller="ResumeCtrl">
     <div class="row education">
       <div class="three columns header-col">
          <h1><span>Formação</span></h1>
       </div>
       <div class="nine columns main-col">
-         <div class="row item">
+         <div class="row item" ng-repeat="formacao in formacoes">
             <div class="twelve columns">
-               <h3>Sistemas de informação </h3>
-               <p class="info">Universidade do Sul de Santa Catariana (Unisul) <span>&bull;</span> <em class="date">Julho 2008 - Temporariamente trancado</em></p>
+               <h3>{{ formacao.curso }} </h3>
+               <p class="info">{{ formacao.universidade }}<span>&bull;</span> <em class="date">{{ formacao.periodo }}</em></p>
                
             </div>
          </div>
@@ -75,28 +76,10 @@
          <h1><span>Cursos</span></h1>
       </div>
       <div class="nine columns main-col">
-         <div class="row item">
+         <div class="row item" ng-repeat="curso in cursos">
             <div class="twelve columns">
-               <h3>Desenvolvimento de aplicações web com JavaScript e AngularJS</h3>
-               <p class="info">VOffice <span>&bull;</span> <em class="date">2014</em></p>
-            </div>
-         </div>
-         <div class="row item">
-            <div class="twelve columns">
-               <h3>Clean code</h3>
-               <p class="info">VOffice <span>&bull;</span> <em class="date">2014</em></p>
-            </div>
-         </div>
-         <div class="row item">
-            <div class="twelve columns">
-               <h3>Academia do Web Developer</h3>
-               <p class="info">Globalcode/V.Office <span>&bull;</span> <em class="date">2011</em></p>
-            </div>
-         </div>
-         <div class="row item">
-            <div class="twelve columns">
-               <h3>Academia do Java </h3>
-               <p class="info">Globalcode/V.Office <span>&bull;</span> <em class="date">2009</em></p>
+               <h3>{{ curso.nome }}</h3>
+               <p class="info">{{ curso.empresa }}<span>&bull;</span> <em class="date">{{ curso.periodo }}</em></p>
             </div>
          </div>
       </div>
@@ -107,30 +90,12 @@
          <h1><span>Experiência</span></h1>
       </div>
       <div class="nine columns main-col">
-         <div class="row item">
+         <div class="row item" ng-repeat="experiencia in experiencias">
             <div class="twelve columns">
-               <h3>Instituto Stela</h3>
-               <p class="info">Desenvolvedor Sênior / Líder Técnico <span>&bull;</span> <em class="date">Agosto 2013 - Atualmente</em></p>
+               <h3>{{ experiencia.empresa }}</h3>
+               <p class="info">{{ experiencia.cargo }}<span>&bull;</span> <em class="date">{{ experiencia.periodo }}</em></p>
                <p>
-               Responsável pelo desenvolvimento de aplicação java web para gerenciamento de projetos públicos. Líder técnico de equipe de desenvolvimento, atuando como responsável por duas equipes de desenvolvimento, de forma estratégica e técnica. 
-               </p>
-            </div>
-         </div> <!-- item end -->
-         <div class="row item">
-            <div class="twelve columns">
-               <h3>Paradigma Business Solution</h3>
-               <p class="info">Desenvolvedor Pleno<span>&bull;</span> <em class="date">Maio 2012 - Agosto 2013</em></p>
-               <p>
-               Analise e desenvolvimento da plataforma de e-procurement com linguagem C#, trabalhando com Javascript, JQuery, Utilizando metodoligia Scrum. Desenvolvimento de componentes visuais para o Framework da empresa.
-               </p>
-            </div>
-         </div>
-         <div class="row item">
-            <div class="twelve columns">
-               <h3>Instituto Stela</h3>
-               <p class="info">Estágiario em desenvolvimento<span>&bull;</span> <em class="date">Setembro 2010 - Maio 2012</em></p>
-               <p>
-               Analise, desenvolvimento e manutenção de plataforma web, com linguagem java. Responsável por atender demandas reportadas pelo cliente.
+               {{ experiencia.descricao }}
                </p>
             </div>
          </div>
@@ -144,13 +109,9 @@
       <div class="nine columns main-col">
          <div class="bars">
             <ul class="skills">
-               <li><span class="bar-expand avancado" title="Avançado"></span><em>JAVA</em></li>
-               <li><span class="bar-expand avancado" title="Avançado"></span><em>JavaScript</em></li>
-               <li><span class="bar-expand avancado" title="Avançado"></span><em>HTML</em></li>
-               <li><span class="bar-expand avancado" title="Avançado"></span><em>C#</em></li>
-               <li><span class="bar-expand avancado" title="Avançado"></span><em>Clean Code</em></li>
-               <li><span class="bar-expand intermediario" title="Intermediário"></span><em>AngularJS</em></li>
-               <li><span class="bar-expand intermediario" title="Intermediário"></span><em>jQuery</em></li>
+               <li ng-repeat="skill in skills">
+                <span class="bar-expand {{skill.conhecimento}}" title="{{skill.title}}"></span><em>{{skill.nome}}</em>
+               </li>
             </ul>
          </div>
       </div>
@@ -242,5 +203,7 @@
     <script src="scripts/jquery.fittext.js"></script>
     <script src="scripts/magnific-popup.js"></script>
     <script src="scripts/init.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/resume.js"></script>
 </body>
 </html>
