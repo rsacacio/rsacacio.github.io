@@ -173,32 +173,36 @@
       </div>
       <div class="row">
          <div class="eight columns">
-            <form action="" method="post" id="contactForm" name="contactForm">
-        <fieldset>
-               <div>
-             <label for="contactName">Nome <span class="required">*</span></label>
-             <input type="text" value="" size="35" id="contactName" name="contactName">
-               </div>
-               <div>
-             <label for="contactEmail">E-mail <span class="required">*</span></label>
-             <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
-               </div>
-               <div>
-             <label for="contactSubject">Assunto</label>
-             <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
-               </div>
-               <div>
-                  <label for="contactMessage">Mensagem <span class="required">*</span></label>
-                  <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-               </div>
-               <div>
-                  <button class="submit">Enviar</button>
-                  <span id="image-loader">
-                     <img alt="" src="images/loader.gif">
-                  </span>
-               </div>
-        </fieldset>
-         </form>
+          <form action="http://formmail.kinghost.net/formmail.cgi" method="POST">
+            <input type="hidden" name="recipient" value="rangel@catalisa.com.br">
+            <input type="hidden" name="redirect" value="http://rsacacio.github.io/">
+            <input type="hidden" name="subject" value="teste de assunto">
+            <input type="hidden" name="email" value="rangel@catalisa.com.br">
+            <fieldset>
+                   <div>
+                 <label for="nome">Nome <span class="required">*</span></label>
+                 <input type="text" value="" size="35" id="nome" name="nome">
+                   </div>
+                   <div>
+                 <label for="replyto">E-mail <span class="required">*</span></label>
+                 <input type="text" value="" size="35" id="replyto" name="replyto">
+                   </div>
+                   <div>
+                 <label for="subject">Assunto</label>
+                 <input type="text" value="" size="35" id="subject" name="subject">
+                   </div>
+                   <div>
+                      <label for="Comentarios">Mensagem <span class="required">*</span></label>
+                      <textarea cols="50" rows="15" id="Comentarios" name="Comentarios"></textarea>
+                   </div>
+                   <div>
+                      <button class="submit">Enviar</button>
+                      <span id="image-loader">
+                         <img alt="" src="images/loader.gif">
+                      </span>
+                   </div>
+            </fieldset>
+           </form>
             <div id="message-warning"> Error boy</div>
          <div id="message-success">
                <i class="fa fa-check"></i>Your message was sent, thank you!<br>
