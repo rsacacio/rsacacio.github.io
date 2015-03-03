@@ -37,8 +37,8 @@ portifolioApp.controller('ResumeCtrl', ['$scope', function ($scope) {
 	$scope.formacoes.push(createFormacao('Universidade do sul de Santa Catarina (Unisul)', 'Sistemas de informação', 'Julho 2008 - Temporariamente trancado'));
 
 	$scope.cursos = [];
-	$scope.cursos.push(createCurso('Desenvolvimento de aplicações web com JavaScript e AngularJS', 'VOffice', '2014'));
-	$scope.cursos.push(createCurso('Clean code', 'VOffice', '2014'));
+	$scope.cursos.push(createCurso('Desenvolvimento de aplicações web com JavaScript e AngularJS', 'V.Office', '2014'));
+	$scope.cursos.push(createCurso('Clean code', 'V.Office', '2014'));
 	$scope.cursos.push(createCurso('Academia do Web Developer', 'Globalcode/V.Office', '2011'));
 	$scope.cursos.push(createCurso('Academia do Java', 'Globalcode/V.Office', '2009'));
 
