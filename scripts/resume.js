@@ -43,8 +43,9 @@ portifolioApp.controller('ResumeCtrl', ['$scope', function ($scope) {
 	$scope.cursos.push(createCurso('Academia do Java', 'Globalcode/V.Office', '2009'));
 
 	$scope.experiencias = [];
-	$scope.experiencias.push(createExperiencia('Instituto Stela', 'Desenvolvedor Sênior / Líder Técnico', 'Agosto 2013 - Atualmente', 'Responsável pelo desenvolvimento de aplicação java web para gerenciamento de projetos públicos. Líder técnico de equipe de desenvolvimento, atuando como responsável por duas equipes de desenvolvimento, de forma estratégica e técnica.'));
-	$scope.experiencias.push(createExperiencia('Paradigma Business Solution', 'Desenvolvedor Pleno', 'Maio 2012 - Agosto 2013', 'Análise e desenvolvimento da plataforma de e-procurement com linguagem C#, trabalhando com Javascript, JQuery, Utilizando metodoligia Scrum. Desenvolvimento de componentes visuais para o Framework da empresa.'));
+	$scope.experiencias.push(createExperiencia('Netprecision', 'Desenvolvedor', 'Abril 2015 - Atualmente', 'Análise, desenvolvimento e manutenção de plataforma web, com linguagem java para gestão de documentos online.'));
+	$scope.experiencias.push(createExperiencia('Instituto Stela', 'Desenvolvedor / Líder Técnico', 'Agosto 2013 - Abril 2015', 'Responsável pelo desenvolvimento de aplicação java web para gerenciamento de projetos públicos. Líder técnico de equipe de desenvolvimento, atuando como responsável por duas equipes de desenvolvimento, de forma estratégica e técnica.'));
+	$scope.experiencias.push(createExperiencia('Paradigma Business Solution', 'Desenvolvedor', 'Maio 2012 - Agosto 2013', 'Análise e desenvolvimento da plataforma de e-procurement com linguagem C#, trabalhando com Javascript, JQuery, Utilizando metodoligia Scrum. Desenvolvimento de componentes visuais para o Framework da empresa.'));
 	$scope.experiencias.push(createExperiencia('Instituto Stela', 'Estágiario em desenvolvimento', 'Setembro 2010 - Maio 2012', 'Análise, desenvolvimento e manutenção de plataforma web, com linguagem java. Responsável por atender demandas reportadas pelo cliente.'));
 
 	$scope.skills = [];
